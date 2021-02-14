@@ -1,0 +1,41 @@
+{
+	"name": "levanbot",
+	"commands": [
+		{
+			"id":"startserver", 
+			"command": "[botname] start",
+			"action": "server start"
+		},
+		{
+			"id":"stopserver",
+			"command":"[botname] stop",
+			"action": "server stop"
+		},
+		{
+			"id":"restartserver",
+			"command":"[botname] restart",
+			"action": "server restart"
+		},
+		{
+			"id":"pulumiapply",
+			"command":"pulumi apply",
+			"action": "pulumi apply"
+		},
+		{
+			"id":"pulumirefresh",
+			"command": "pulumi refresh",
+			"action": "pulumi refresh"
+		}
+	],
+
+	"on_comment": [
+		"startserver",
+		"stopserver",
+		"restartserver",
+		"pulumiapply"
+	],
+
+	"on_pull_request": [
+		"pulumirefresh"
+	]
+}
